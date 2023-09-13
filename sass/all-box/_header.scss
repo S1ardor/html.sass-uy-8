@@ -1,0 +1,250 @@
+nav {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    padding: 39px 0 ;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.navbar {
+    @include fol-flex;
+    &__content-center {
+        @include mini-flex;
+        column-gap: 40px;
+        a {
+            text-decoration: none;
+            color: #282B22;
+            max-width: 108px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 16px;        
+        }
+    }
+    .navbar__content-right {
+        @include mini-flex;
+        column-gap: 63px;
+    }
+    &__content-phone {
+        display: flex;
+        column-gap: 7px;
+        p {
+            max-width: 161px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 20px;
+            color: #3D4A39;
+        }
+    }
+    .link__in-box {
+        display: none
+    }
+    &__content-icons {
+        @include mini-flex;
+        column-gap: 15px;
+    }
+    .input__check,
+    .lbl__check,
+    .lbl__check-2 {
+        display: none;
+    }
+    .btn,
+    .iteam__span {
+        display: none;
+    }
+    .btn:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+@include for-the-tablet {
+    .navbar {
+        &__content-center {
+            flex-direction: column;
+            max-width: 45%;
+            height: 100vh;
+            width: 100%;
+            font-weight: 500;
+            font-size: 18px;
+            background: #fff;
+            align-items: start;
+            padding-left: 20px;
+            position: fixed;
+            top: 131px;
+            right: 0;
+            justify-content: start;
+            row-gap: 40px;
+            transform: translateX(120%);
+            visibility: hidden;
+            transition: all 0.5s;
+        }
+        .iteam__span {
+            display: none;
+        }
+        .lbl__check {
+            display: block;
+        }
+        .input__check:checked~ .navbar__content-center {
+            transform: translateX(0);
+            visibility: visible;
+        }
+        .input__check:checked~ .lbl__check {
+            display: none;
+        }
+        .navbar__content-right {
+            @include mini-flex;
+            column-gap: 50px;
+        }
+
+    }
+}
+@include the-mobile {
+    .navbar {
+        &__content-icons {
+            display: none;
+        }
+        &__content-center {
+            padding: 54px 10px;
+            background-color: #fff;
+            max-width: 100%;
+            width: 100%;
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 500;
+            row-gap: 25px;
+        }
+        .iteam__span {
+            margin-top: 130px;
+            display: block;
+
+        }
+        .list {
+            @include mini-flex;
+            column-gap: 7px;
+            margin-bottom: 31px;
+        }
+        .btn {
+            padding: 22px 72px;
+            background-color: #AE7B3C;
+            border: none;
+            border-radius: 2px;
+            color: #fff;
+            display: block;
+            transition: all 0.5s;
+        }
+        &__content-phone {
+            display: none;
+        }
+        .link__in-box  {
+            display: block;
+            align-items: center;
+            margin-top: 40px;
+            column-gap: 15px;
+        }
+    }
+}
+.header__one-box {
+    text-align: center;
+    margin-top: 132px;
+    background-image: url(../images/tv-cabinet-modern-living-room-with-armchair-plant-dark-marble-wall-3d-rendering\ 1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 687px;
+
+    &::after {
+        content: '';
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.20) -13.19%, rgba(0, 0, 0, 0.85) 94.01%);
+        width: 100%;
+        height: 687px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+    }
+    h1 {
+        max-width: 446px;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 67px;
+        margin: 0 auto;
+        left: 0;
+    }
+    p {
+        max-width: 537px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        margin: 20px auto;
+        margin-bottom: 50px;
+        opacity: 80%;
+    }
+    .hero__content-iteam {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 685px;
+        width: 100%;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        z-index: 5;
+        .button {
+            max-width: 260px;
+            width: 100%;
+            padding: 22px 56px;
+            background-color: #AE7B3C;
+            border: none;
+            color: #fff;
+            border-radius: 2px;
+            margin-bottom: 120px;
+            transition: all 0.3s;
+            &:hover {
+                transform: scale(1.1);
+            }
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+        .classs-clas {
+            max-width: 1300px;
+            width: 100%;
+            padding: 0 20px;
+        }
+        .btnn {
+            max-width: 1300px;
+            width: 100%;
+            height: 1px;
+            border: none;
+            opacity: 0.4;
+            background: #FFF;
+            margin-bottom: 41px
+        }
+        .hero__content-img {
+            @include fol-flex;
+            max-width: 1300px;
+            width: 100%;
+            bottom: 61px;
+            left: 200px;
+            .hero__content-stril {
+                @include fol-flex;
+                column-gap: 25px;
+            }
+        }
+        span {
+            position: absolute;
+            padding: 7px 11px;
+        }
+    }
+    .hero__content-son {
+        display: flex;
+        column-gap: 15px;
+
+        .hero__content-yumaloq-1 {
+            opacity: 30%;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none
+}
+body {
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+@import './fonts';
+@import './veriables';
+@import './mixins';
+@import './container';
+@import './all-box/header';
+@import './all-box/main';
+@import './all-box/footer';
